@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="10pt"
+    android:background="@color/bgBlue"
+    tools:context=".Fragments.MainFragment">
+
+    <ImageView
+        android:id="@+id/bgImage"
+        android:layout_width="375dp"
+        android:layout_height="257dp"
+        android:layout_marginTop="25dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="339dp"
+        android:layout_height="228dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:alpha="1"
+        android:background="#00FFFFFF"
+        android:backgroundTint="#00FFFFFF"
+        android:visibility="visible"
+        app:cardBackgroundColor="#00401818"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="0dp"
+        app:cardMaxElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bgImage"
+        app:layout_constraintEnd_toEndOf="@+id/bgImage"
+        app:layout_constraintStart_toStartOf="@+id/bgImage"
+        app:layout_constraintTop_toTopOf="@+id/bgImage">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#00FFFFFF"
+            android:backgroundTint="#00FFFFFF">
+
+            <TextView
+                android:id="@+id/cityName"
+                android:layout_width="310dp"
+                android:layout_height="52dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Москва"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="34sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.517"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/temperatureText"
+                android:layout_width="196dp"
+                android:layout_height="83dp"
+                android:fontFamily="@font/montserrat"
+                android:shadowColor="@color/black"
+                android:text="+30°C"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="60sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.167"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cityName"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageView
+                android:id="@+id/temperatureImage"
+                android:layout_width="91dp"
+                android:layout_height="83dp"
+                android:layout_marginStart="8dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/sunny"
+                app:layout_constraintBottom_toBottomOf="@+id/temperatureText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/temperatureText"
+                app:layout_constraintTop_toTopOf="@+id/temperatureText"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/conditionText"
+                android:layout_width="194dp"
+                android:layout_height="34dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/montserrat"
+                android:shadowColor="@color/black"
+                android:text="Солнечно"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/temperatureText"
+                app:layout_constraintVertical_bias="0.058" />
+
+            <TextView
+                android:id="@+id/currentDateText"
+                android:layout_width="194dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/montserrat"
+                android:shadowColor="@color/black"
+                android:text="Время и дата"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toStartOf="@+id/findButton"
+                app:layout_constraintStart_toEndOf="@+id/reloadButton"
+                app:layout_constraintTop_toBottomOf="@+id/conditionText" />
+
+            <ImageButton
+                android:id="@+id/findButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@null"
+                android:scaleType="fitXY"
+                android:src="@drawable/find_button_image"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.155"
+                app:layout_constraintStart_toEndOf="@+id/conditionText"
+                app:layout_constraintTop_toBottomOf="@+id/conditionText"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageButton
+                android:id="@+id/reloadButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@null"
+                android:scaleType="fitXY"
+                android:src="@drawable/reload_button_image"
+                app:layout_constraintBottom_toBottomOf="@+id/findButton"
+                app:layout_constraintEnd_toStartOf="@+id/conditionText"
+                app:layout_constraintHorizontal_bias="0.628"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/conditionText"
+                app:layout_constraintVertical_bias="0.0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5pt"
+        android:backgroundTint="@color/bgBlue"
+        app:layout_constraintEnd_toEndOf="@+id/bgImage"
+        app:layout_constraintStart_toStartOf="@+id/bgImage"
+        app:layout_constraintTop_toBottomOf="@+id/bgImage"
+        app:tabSelectedTextColor="#FFD400"
+        app:tabTextColor="#FFFFFF">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Day" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Week"
+            tools:layout_editor_absoluteX="105dp"
+            tools:layout_editor_absoluteY="300dp" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/bgImage"
+        app:layout_constraintStart_toStartOf="@+id/bgImage"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
